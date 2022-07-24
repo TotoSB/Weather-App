@@ -22,7 +22,7 @@ export default function WeatherApp() {
 
     async function loadInfo(city = "London") {
         try {
-            const request = await fetch(`${process.env.REACT_APP_URL}${process.env.REACT_APP_KEY}&q=${city}`)
+            const request = await fetch(`${process.env.REACT_APP_URL}${process.env.REACT_APP_KEY}&q=${city}&aqi=no`)
 
             const json = await request.json();
 
